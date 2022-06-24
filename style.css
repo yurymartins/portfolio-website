@@ -1,5 +1,18 @@
 :root {
-    --bg: #f06529;
+    --almost-black: #111111;
+    --black: #000000;
+    --gray: #464646;
+    --white: #ffffff;
+    --yellow: #f3f714;
+    --orange: #f06529;
+    --red: #f84649;
+    --light-blue: #61dbfb;  
+    --medium-blue: #4183b5;
+    --blue: #045bf0;
+    --light-green: #00A100;
+    --green: #4f9c43;
+    --purple: #a179dc;
+    --bg: #1d1d1d;
 }
 
 * {
@@ -15,8 +28,8 @@ html {
 body {
     width: 100%;
     position: relative;
-    background: #1d1d1d;
-    color: #fff;
+    background: var(--bg);
+    color: var(--white);
     font-family: 'roboto', sans-serif;
 }
 
@@ -28,7 +41,7 @@ body {
     left: 0;
     width: 100%;
     height: 60px;
-    background: #1d1d1d;
+    background: var(--bg);
     padding: 0 10vw;
     display: flex;
     justify-content: space-between;
@@ -46,7 +59,7 @@ body {
 }
 
 .link {
-    color: #fff;
+    color: var(--white);
     text-decoration: none;
     margin: 0 10px;
     padding: 10px;
@@ -67,7 +80,7 @@ body {
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background: #fff;
+    background: var(--white);
 }
 
 .link.active::after,
@@ -78,7 +91,7 @@ body {
     left: 0;
     width: 100%;
     height: 1px;
-    background: #fff;
+    background: var(--white);
 }
 
 /* Header */
@@ -115,8 +128,9 @@ body {
     margin-left: auto;
     position: relative;
     padding: 10px 20px;
-    color: #1d1d1d;
+    color: var(--bg);
     z-index: 2;
+    font-size: 1.5rem;
 }
 
 .profession::before {
@@ -150,8 +164,8 @@ body {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 50px;
-    background: rgb(0, 161, 0);
-    color: #fff;
+    background: var(--light-green);
+    color: var(--white);
     border: none;
 }
 
@@ -208,7 +222,7 @@ body {
     right: 90px;
     width: 50px;
     height: 2px;
-    background: #fff;
+    background: var(--white);
     transform-origin: right;
     transform: rotate(-30deg);
 }
@@ -245,13 +259,45 @@ body {
 
 .skill {
     font-size: 2rem;
-    color: #464646;
+    color: var(--gray);
     line-height: 200px;
 }
 
-.skill-card:hover {
-    background: var(--bg);
+.skill-card.html:hover {
+    background: var(--orange);
 }
+
+.skill-card.css:hover {
+    background: var(--blue);
+}
+
+ .skill-card.js:hover {
+    background: var(--yellow);
+}
+
+.skill-card.java:hover {
+    background: var(--red);
+}
+
+.skill-card.angular:hover {
+    background: var(--red);
+} 
+
+.skill-card.reactjs:hover {
+    background: var(--light-blue);
+} 
+
+.skill-card.python:hover {
+    background: var(--medium-blue);
+} 
+
+.skill-card.nodejs:hover {
+    background: var(--green);
+} 
+
+.skill-card.csharp:hover {
+    background: var(--purple);
+} 
 
 .skill-card.large {
     grid-column: 2 span;
@@ -279,8 +325,8 @@ body {
 }
 
 .filter-btn.active {
-    background: rgb(0, 161, 0);
-    color: #fff;
+    background: var(--light-green);
+    color: var(--white);
 }
 
 .project-container {
@@ -308,7 +354,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: var(--black);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -352,7 +398,7 @@ body {
         position: absolute;
         width: 100%;
         height: 2px;
-        background: #fff;
+        background: var(--white);
         top: 30%;
         transition: .5s;
     }
@@ -374,7 +420,7 @@ body {
     .links-container {
         position: absolute;
         top: 60px;
-        background: #1d1d1d;
+        background: var(--bg);
         width: 100%;
         left: 0;
         padding: 0 10vw;
@@ -395,4 +441,59 @@ body {
         display: block;
         height: 50px;            
     }
+}
+
+footer {
+    background: var(--almost-black);
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    color: var(--white);
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: center;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 3rem;
+    font-size: 14px;
+}
+
+/* .socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.socials a i {
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover i {
+    color: aqua;
+}
+*/
+
+.footer-bottom {
+    background: var(--black);
+    width: 100vw;
 }
